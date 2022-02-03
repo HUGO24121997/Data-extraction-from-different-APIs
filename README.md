@@ -12,4 +12,5 @@ Dès qu'un message ADS-B d'un avion arrive sur  les  serveurs,ils créent un enr
 
   --------------------------------------------------------------------------------------------------------  
   ## covid 19 worldwide API
-  CovidTracker est un outil qui permet de suivre l'évolution de l'épidémie du Coronavirus en France et dans le monde. La plateforme propose diverses visualisations de données, des     articles afin de décrypter l'évolution de l'épidémie.
+  CovidTracker est un outil qui permet de suivre l'évolution de l'épidémie du Coronavirus en France et dans le monde. La plateforme propose diverses visualisations de données, des     articles afin de décrypter l'évolution de l'épidémie.  
+  L'API de données publiques donne accès à toutes les données au niveau national et étatique. ils fournissons des données aux formats JSON et CSV.
