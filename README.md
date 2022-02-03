@@ -11,9 +11,27 @@ Les avions vus par le réseau OpenSky sont associés à des informations sur l'�
 Dès qu'un message ADS-B d'un avion arrive sur  les  serveurs,ils créent un enregistrement pour l'avion - le soi-disant vecteur d'état. Toutes les informations nécessaires au suivi de l'avion, y compris son identité (adresse OACI + indicatif d'appel), les informations temporelles ( timestamps Unix ), et les informations spatiales (position, vitesse, cap, ...) seront représentées dans ce vecteur d'état.  
 
   --------------------------------------------------------------------------------------------------------  
-  ## covid 19 worldwide API
+  ## CovidTracker API
   CovidTracker est un outil qui permet de suivre l'évolution de l'épidémie du Coronavirus en France et dans le monde. La plateforme propose diverses visualisations de données, des     articles afin de décrypter l'évolution de l'épidémie.  
   L'API de données publiques donne accès à toutes les données au niveau national et étatique. ils fournissons des données aux formats JSON et CSV.  
   
   --------------------------------------------------------------------------------------------------------
   ## Explication
+  Pour commencer, nous avons récupérer des données des deux api en grâce aux Requêtes HTTP en Python en utilisant les adresses URL respectives des deux APIs. Et ce, grâce au module "requests", plus particulièrement la méthode 'get()'. Cette méthode est communément appellée 'Web Scraping'. 
+''' EXEMPLE code résultat '''  
+
+
+Une fois les données récupérés, on les encode sous format 'JSON' en utilisant la méthode 'json()' du module "json" pour les rendre plus facilement utilisables.
+''' EXEMPLE code résultat '''  
+
+
+Ensuite, On les place dans un DataFrame Pandas pour les visualiser, les structurer et les nettoyer
+''' EXEMPLE code résultat '''  
+
+
+On supprime les attributs non essentielle à notre utilisation prévue de ces données
+''' EXEMPLE code résultat '''
+
+Et pour finir, on les injecte dans une base de données sqllite, avec le module 'sqllite3' 
+''' EXEMPLE code résultat '''  
+
